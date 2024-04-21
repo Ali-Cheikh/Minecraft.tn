@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft.tn Whitelist Application</title>
+    <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="google_translate_element" style="float: right;"></div>
+    <br><br>
+    <header>
+        <br><br>
+        <h1 style="color: rgb(221, 22, 22); text-align: center; text-shadow: rgb(0, 0, 0) 1px 2px 20px;">Minecraft<span style="color: white">.tn</span> <span style="color: wheat">Whitelist</span> Application</h1>
+    </header>
+    <center>
+        <form id="whitelistForm" class="form" >
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="username">Minecraft Name  :</label>
+                    <input type="text" class="form-control alert-dark bg-dark text-light" id="username" name="username" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="discordName">Discord Name:</label>
+                    <input type="text" class="form-control alert-dark bg-dark text-light" id="discordName" name="discordName" required>
+                </div>
+            </div>
+            <hr>
+            <div class="form-row">
+                <div class="form-group col-md-6 d-flex align-items-center">
+                    <label for="premium" class="mb-0">Minecraft Java or Bedrock?</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <select class="form-control bg-dark text-light" id="premium" name="platform" required>
+                        <option value="">Select Option</option>
+                        <option value="JAVA">Java <i class="fas fa-gem"></i></option>
+                        <option value="bedrock">Bedrock <i class="fas fa-compact-disc"></i></option>
+                    </select>
+                </div>
+            </div><br>
+            <div class="form-row">
+                <div class="form-group col-md-6 order-md-2 d-flex align-items-center justify-content-end title">
+                    <label for="premium" class="mb-0">Minecraft Java or Bedrock?</label>
+                </div>
+                <div class="form-group col-md-6 order-md-1">
+                    <select class="form-control bg-dark text-light" id="premium" name="platform" required="">
+                        <option value="">Select Option</option>
+                        <option value="premium">Premium </option>
+                        <option value="Cracked">Cracked </option>
+                    </select>
+                </div>
+            </div>
+            
+            <hr>
+            <!-- Have you been banned section -->
+            <center>
+            <div class="form-group">
+                <fieldset>
+                  <legend class="text-center">Have you been banned from our/other server?</legend>
+                  <div class="button-checkbox-group">
+                    <input type="radio" id="bannedYes" name="bannedStatus" value="no" style="display: none;">
+                    <label class="button-checkbox btn btn-success" for="bannedNo"><i class="fas fa-check-circle"></i> Yes</label>
+                    <input type="radio" id="bannedNo" name="bannedStatus" value="yes" style="display: none;">
+                    <label class="button-checkbox btn btn-danger" for="bannedYes"><i class="fas fa-times-circle"></i> No</label>
+                </div>
+                </fieldset>
+              </div>
+              <div class="form-group" id="bannedReasonContainer" style="display: none;">
+                <label for="bannedReason">Why?</label>
+                <input type="text" class="form-control bg-dark" id="bannedReason" name="bannedReason" disabled>
+              </div>
+            <div>
+            </center>
+            <br><br>
+            <!-- Age, Server Playtime, Minecraft Playtime -->
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="age">Your Age  :</label>
+                    <select class="form-control  bg-warning text-dark" id="age" name="age" required>
+                        <option value="" disabled>Select Age</option>
+                        <option value="12-16">12 - 16</option>
+                        <option value="17-20">17 - 20</option>
+                        <option value="21-25">21 - 25</option>
+                        <option value="26-30">26 - 30</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="serverPlaytime">Server Playtime (hours):</label>
+                    <input type="number" class="form-control bg-dark text-light" id="serverPlaytime" name="serverPlaytime" min="1" step="0.5" required>
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for="minecraftPlaytime">Minecraft PlayPeriod  :</label>
+                    <input type="date" class="form-control bg-warning text-dark" id="minecraftPlaytime" name="minecraftPlaytime"
+                        placeholder="Example: From what year " required>
+                </div>
+            </div>
+            <br><br>
+            <div class="form-group">
+                <fieldset>
+                    <legend class="text-center">Did you accept the rules?</legend>
+                    <div class="button-checkbox-group ">
+                        <input type="checkbox" class="d-none" id="acceptRulesYes" name="acceptRules" value="yes" onclick="displayAlert()">
+                        <label class="button-checkbox btny btn btn-primary" for="acceptRulesYes"><i class="fas fa-check-circle"></i></label>
+                        <input type="checkbox" class="d-none" id="acceptRulesNo" name="acceptRules" value="no" onclick="alertt()">
+                        <label class="button-checkbox btn btno btn-danger" for="acceptRulesNo"><i class="fas fa-times-circle"></i></label>
+                        <a href="rules.html" target="_blank" class="btny btn btn-warning"><i class="fas fa-info-circle"></i></a>
+                    </div>
+                </fieldset>
+            </div>
+
+            <br><br>
+            <div class="form-group">
+                <label for="additionalInfo">Additional Info:</label>
+                <textarea class="form-control bg-dark text-light" id="additionalInfo" name="additionalInfo"></textarea>
+            </div><br><hr>
+            <button type="submit" id="submit" class="btn minecraft" style="display: none;">SUBMIT</button>
+            <br>
+            <div class="form-group">
+            <label style="display: none;" id="sayee"><u>Hurry yalla submit </u></label>
+            </div>
+        </form>
+        <br><hr>
+        <div id="successMessage" style="display: none;">
+            <p>Your application has been submitted successfully!</p>
+            <button class="btn btn-success">
+                <a href="https://mediafire/mods.com" class="a1"><i class="fas fa-download btn-icon"></i>Download Mods</a>
+            </button>
+        </div>
+    </center>
+    <br><br>
+    <footer>
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fab fa-discord"></i> Discord: <a href="https://discord.gg/jRbrRwEzjH" class="a1" style="color: red;"> Minecraft</a></li>
+                        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAOVBMVEUAAAABV6kqVAFXsQ8nju1uwxBXqv89ov9LqP9EgAH///8xmPcNdNMulfQBJkdYrgEBTpYTLi8Odcz22QUHAAAAAXRSTlMAQObYZgAAAMlJREFUeAGtzoEKhCAMgOGZM+2yZff+D3ubKzNKDLgfCOY+TKgyJTh7CYaclVDS+T3IKyeNznnvQ0CcuEIKGLk2kE6AV8C7j1SA9ARcD4yuAE6BMcbayy+0eZ4j3zG8Am7v2IbAH0T8O/BakBRMNfAd4Lk+CJyul2W5vaEJiMiYdV354LhdtzGmYds2AAGIIpxUg0QnYPIIQDKGJz6zR7JVAA3wvQKilJtKOhN1AeztIMYWAJIyG6SkM1QVICIpgFsplwE8RqUK/AAHnxdf668/8AAAAABJRU5ErkJggg==" alt="" width="5%"> Planet Minecraft: <a href="https://minecraft.tn/" class="a1" style="color: wheat;"> Minecraft.tn</a></li>
+                        <li><i class="far fa-envelope"></i> Email: <a href="mailto:shhhhhc6gmail.com" class="a1" style="color: wheat;">TNserver@mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Donate</h5>
+                    <p>Support the server by donating!</p>
+                    <a href="src/payto.pdf" class="btn btn-primary">Donate Now</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </footer>
+    <div class=" fixed-bottom fixed-element">
+        <center><span style="color: #28a745;">© 2024 <a href="bit.ly/Aliportfolio"> Ali Cheikh.</a>  <span style="color: rgb(241, 86, 86);">Tunisian server</span> All rights reserved.</span></center>
+    </div>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="script.js"></script>
+</body>
+</html>
