@@ -38,28 +38,44 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
   });
 
   function displayAlert() {
-    
-    document.getElementById('submit').style.display = 'block';
-    document.getElementById('sayee').style.display = 'block';
+    // Define an array of random questions about the rules
+    const ruleQuestions = [
+        "What is the first rule?",
+        "Can you explain the second rule?",
+        "What does the third rule state?"
+        // Add more questions here as needed
+    ];
+
+    // Randomly select a question from the array
+    const randomQuestion = ruleQuestions[Math.floor(Math.random() * ruleQuestions.length)];
+
+    // Display the alert with the random question
     Swal.fire({
         icon: 'info',
-        title: 'Mitakid ? 9rithom',
+        title: 'Rules Question',
         html: `
-        <h4>tijmo til9aw il rules mta3 server fi discord wila</h4>
-        <h5>
-        <a class="btny btn btn-warning" onclick="rules()"><i class="fas fa-info-circle"></i></a>
-        </h5>
-        ` ,
+            <h4>${randomQuestion}</h4>
+            <h5>
+                <input placeholder="Your answer" id="ruleAnswer" name="randomQuestion" required>
+            </h5>
+        `,
         showCancelButton: true,
-        cancelButtonText: 'Ayh',
-        showCancelButton: true,
-        showConfirmButton: false,
-        allowOutsideClick: false
+        cancelButtonText: 'No',
+        showConfirmButton: true,
+        confirmButtonText: 'Submit',
+        allowOutsideClick: false,
+        preConfirm: () => {
+            // Retrieve the user's answer
+            const answer = document.getElementById('ruleAnswer').value;
+            // You can process the answer here if needed
+            // For now, just display it in console
+            console.log("User's answer:", answer);
+        }
     });
 }
 
 function submitFormToGoogleSheets() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby6eU6rXzWCuLp-rYRM3ya6mD-0m6U4hTLTPSi-6qjiQRU-GUjbawMgom3Xq1Y02C6a/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyy5nY3y95FEIajQfter324F_P2cOcrmY7nc_f41Prqn0V6n-KpFKdiJDdCH0RvYm-H/exec';
     const form = document.getElementById('whitelistForm');
     Swal.fire({
         icon: 'info',
