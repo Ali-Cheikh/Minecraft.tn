@@ -244,7 +244,7 @@ function rules() {
 
     Swal.fire({
         html: content,
-        width: '70%',
+        width: '100%',
         padding: '3rem',
         background: `url('src/download.png')`,
         backdrop: `
