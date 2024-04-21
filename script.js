@@ -248,7 +248,7 @@ function rules() {
             popup: 'custom-swal-width'
         },
         width: window.innerWidth < 576 ? '100%' : '75%', // Set width to 100% for smaller screens, 75% for larger screens
-        padding: '1rem',
+        padding: '3rem',
         background: `url('src/download.png')`,
         backdrop: `
             rgba(0,0,0,0.4)
