@@ -237,15 +237,18 @@ var content = `
                 </section>
             </div>
 `;
-
 function rules() {
     document.getElementById('submit').style.display = 'block';
     document.getElementById('sayee').style.display = 'block';
 
     Swal.fire({
         html: content,
-        width: window.innerWidth < 576 ? '100px' : '70%', // Adjust width based on screen width
-        padding: '3rem',
+        customClass: {
+            // Add a custom class to the modal
+            popup: 'custom-swal-width'
+        },
+        width: window.innerWidth < 576 ? '100%' : '75%', // Set width to 100% for smaller screens, 75% for larger screens
+        padding: '1rem',
         background: `url('src/download.png')`,
         backdrop: `
             rgba(0,0,0,0.4)
@@ -261,3 +264,4 @@ function rules() {
         }
     });
 }
+
