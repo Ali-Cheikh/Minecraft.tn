@@ -244,7 +244,7 @@ function rules() {
 
     Swal.fire({
         html: content,
-        width: '100%',
+        width: window.innerWidth < 576 ? '100px' : '70%', // Adjust width based on screen width
         padding: '3rem',
         background: `url('src/download.png')`,
         backdrop: `
