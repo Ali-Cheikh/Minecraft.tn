@@ -94,12 +94,34 @@ form {
         background-position-x: 50% !important;
         padding: 30% 5% !important;
 }
+
 @media screen and (max-width: 980px) {
     /* Define width for small screens */
     .swal2-popup.custom-swal-width {
         width: 100% !important;
     }
+
+    .swal2-popup.custom-swal-width section {
+        margin: 0 !important; /* Add margin around sections */
+        max-width: 100% !important; /* Limit section width */
+        padding-top: 30px !important;
+        padding-right: 15px !important; /* Add padding on the right */
+        padding-left: 15px !important; /* Add padding on the left */
+    }
+    
+    /* Adjust font size for all text inside the SweetAlert */
+    .swal2-popup {
+        font-size: 14px !important;
+    }
+    
+    .swal2-popup.custom-swal-width li {
+        margin-bottom: 10px !important; /* Add some space between list items */
+        padding-right: 15px !important; /* Add padding on the right */
+        padding-left: 15px !important; /* Add padding on the left */
+    }
 }
+
+
 .swal2-popup.custom-swal-width {
     width: 200%;
 }
