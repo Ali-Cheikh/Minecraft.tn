@@ -44,7 +44,7 @@
             </div><br>
             <div class="form-row">
                 <div class="form-group col-md-6 order-md-2 d-flex align-items-center justify-content-end title">
-                    <label for="premium" class="mb-0">Minecraft Java or Bedrock?</label>
+                    <label for="premium" class="mb-0">Minecraft Premium Cracked?</label>
                 </div>
                 <div class="form-group col-md-6 order-md-1">
                     <select class="form-control bg-dark text-light" id="premium" name="amehi" required="">
@@ -62,10 +62,15 @@
                 <fieldset>
                   <legend class="text-center">Have you been banned from our/other server?</legend>
                   <div class="button-checkbox-group">
-                    <input type="radio" id="bannedYes" name="bannedStatus" value="no" style="display: none;">
+                    <input type="radio" id="bannedYes" name="bannedStatus" value="yes" style="display: none;">
                     <label class="button-checkbox btn btn-success" for="bannedNo"><i class="fas fa-check-circle"></i> Yes</label>
-                    <input type="radio" id="bannedNo" name="bannedStatus" value="yes" style="display: none;">
+                    <input type="radio" id="bannedNo" name="bannedStatus" value="no" style="display: none;" >
                     <label class="button-checkbox btn btn-danger" for="bannedYes"><i class="fas fa-times-circle"></i> No</label>
+                    <div style="display: none;" id="sa7it">
+                        <br>
+                        <h4 translate="no"> sa7it, Matitbanech !</h4>
+                        <br>
+                    </div>
                 </div>
                 </fieldset>
               </div>
@@ -81,7 +86,7 @@
                 <div class="form-group col-md-4">
                     <label for="age">Your Age  :</label>
                     <select class="form-control  bg-warning text-dark" id="age" name="age" required>
-                        <option value="" disabled>Select Age</option>
+                        <option value="">Select Age</option>
                         <option value="12-16">12 - 16</option>
                         <option value="17-20">17 - 20</option>
                         <option value="21-25">21 - 25</option>
@@ -105,10 +110,10 @@
                     <legend class="text-center">Did you accept the rules?</legend>
                     <div class="button-checkbox-group ">
                         <input type="checkbox" class="d-none" id="acceptRulesYes" name="acceptRules" value="yes" onclick="displayAlert()">
-                        <label class="button-checkbox btny btn btn-primary" for="acceptRulesYes"><i class="fas fa-check-circle"></i></label>
+                        <label class="button-checkbox btny btn btn-primary" for="acceptRulesYes"><i class="fas fa-check-circle"></i></label>                        
                         <input type="checkbox" class="d-none" id="acceptRulesNo" name="acceptRules" value="no" onclick="alertt()">
                         <label class="button-checkbox btn btno btn-danger" for="acceptRulesNo"><i class="fas fa-times-circle"></i></label>
-                        <a href="rules.html" target="_blank" class="btny btn btn-warning"><i class="fas fa-info-circle"></i></a>
+                        <button class="btny btn btn-warning" type="menu" onclick="rules()"><i class="fas fa-info-circle"></i></button>
                     </div>
                 </fieldset>
             </div>
@@ -153,10 +158,10 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Donate</h5>
-                    <p>Support the server by donating!</p>
-                    <a href="src/payto.pdf" class="btn btn-primary">Donate Now</a>
+                    <h5>Welcome Among Us !</h5>
+                    <img class="logo align-content-center" src="https://cdn.discordapp.com/attachments/974019430533189713/1231688530544169024/server-icon.png?ex=6637de55&is=66256955&hm=d0f04f1b549641489c8b28d9431f4a7dc9e1af5f081d90b51bb70ebd64f55a27&" width="40%" alt="logo">
                 </div>
+                
             </div>
         </div>
         <br><br>
