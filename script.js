@@ -32,6 +32,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
   document.getElementById('bannedNo').addEventListener('change', function() {
   if (this.checked) {
       document.getElementById('bannedReasonContainer').style.display = 'block';
+      document.getElementById("sa7it").style.display="none";
       document.getElementById('bannedReason').disabled = false;
   }
   });
