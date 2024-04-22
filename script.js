@@ -80,7 +80,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
 }
 
 function submitFormToGoogleSheets() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwndrpMakTxyA_F1duj6lnhLsM_D5WOh20nXKiDV4B4-bdrqrIqmXLY8sUNVryR1Ex1/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyq_BmBKGHROyINswn8d2NYNfZ2c2ChOT8pjPrt410dJFThMSH7tMBDnJX7EvAMWOjz/exec';
     const form = document.getElementById('whitelistForm');
     Swal.fire({
         icon: 'info',
