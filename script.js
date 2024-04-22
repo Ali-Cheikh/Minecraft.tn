@@ -40,9 +40,14 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
   function displayAlert() {
     // Define an array of random questions about the rules
     const ruleQuestions = [
-        "What is the first rule?",
-        "Can you explain the second rule?",
-        "What does the third rule state?"
+        "andek l7a9 test3ml lhack fel server ?",
+        'chnia el alt ?',
+        'ta3rf chma3neha glitch wala bug ?',
+        'ki isiroulk fel game ech t3ml',
+        'Kif tra wa7d ihacki, chnouwa ta3mel?'
+        'Fassarli chnihiya flood/spam',
+        'Kif ta3ti lplayer trust ou yasr9ek. Chnouwa ta3mel?',
+        'Fassarli trapping'
         // Add more questions here as needed
     ];
 
