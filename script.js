@@ -53,19 +53,19 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
     // Randomly select a question from the array
     const randomQuestion = ruleQuestions[Math.floor(Math.random() * ruleQuestions.length)];
 
+    // Update the hidden input field with the random question
+    document.getElementById('randomQuestionInput').value = randomQuestion;
+
     // Display the alert with the random question
     Swal.fire({
         icon: 'info',
         title: 'Rules Question',
         html: `
-            <h6 name="randomQ">${randomQuestion}</h6>
-            <h5>
-                <input placeholder="Your answer" id="ruleAnswer" name="randomQuestion" required>
+            <h6>${randomQuestion}</h6>
 
-            </h5>
+            <input placeholder="Your answer" id="ruleAnswer" name="randomAnswer" required>
         `,
-        showCancelButton: true,
-        cancelButtonText: 'No',
+        showCancelButton: false,
         showConfirmButton: true,
         confirmButtonText: 'Submit',
         allowOutsideClick: false,
@@ -80,7 +80,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
 }
 
 function submitFormToGoogleSheets() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwGv8w87PAp-Ru8jGYkk6Q1iCszCFUKuIQSyG9AJWnAsMo2DubNC3GKJQJet80RuLXI/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwndrpMakTxyA_F1duj6lnhLsM_D5WOh20nXKiDV4B4-bdrqrIqmXLY8sUNVryR1Ex1/exec';
     const form = document.getElementById('whitelistForm');
     Swal.fire({
         icon: 'info',
@@ -294,7 +294,17 @@ function myFunction(event) {
 
     Swal.fire({
         text: 'cpyied to clipboeard',
-        html: '<h2>play.minecraft.tn</h2><br><h4 style="color:wheat">coppied</h4>',
+        html: `<h6 style="color:wheat">coppied</h6>
+        <h2 style="font-size:220%">play.minecraft.tn</h2>
+        <h6 style="color:orange"><i class="fa fa-warning"></i>You must join discord !</h6>
+        <br>
+        <p class="btn btn-primary">
+        <a href="https://discord.gg/G6psWsXpEx" class="btn btn-primary"><i class="fa fa-door-open"></i> <span style="color:white"> Join Discord </span></a>
+        </p>
+        `,
+        backdrop: `
+            rgba(0444,044,044,044.66)
+        `,
          // Set the title color to white
         imageUrl: 'src/server-icon.png',
         imageWidth: 200,
@@ -304,6 +314,6 @@ function myFunction(event) {
         showConfirmButton: false,
         allowOutsideClick: true
     });
-    
+
 }
 
