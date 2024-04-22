@@ -42,9 +42,8 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
     const ruleQuestions = [
         "andek l7a9 test3ml lhack fel server ?",
         'chnia el alt ?',
-        'ta3rf chma3neha glitch wala bug ?',
-        'ki isiroulk fel game ech t3ml',
-        'Kif tra wa7d ihacki, chnouwa ta3mel?'
+        'ta3rf chma3neha glitch wala bug ? ki isiroulk fel game ech t3ml',
+        'Kif tra wa7d ihacki, chnouwa ta3mel?',
         'Fassarli chnihiya flood/spam',
         'Kif ta3ti lplayer trust ou yasr9ek. Chnouwa ta3mel?',
         'Fassarli trapping'
@@ -59,9 +58,10 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
         icon: 'info',
         title: 'Rules Question',
         html: `
-            <h4>${randomQuestion}</h4>
+            <h6 name="randomQ">${randomQuestion}</h6>
             <h5>
                 <input placeholder="Your answer" id="ruleAnswer" name="randomQuestion" required>
+
             </h5>
         `,
         showCancelButton: true,
@@ -80,7 +80,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
 }
 
 function submitFormToGoogleSheets() {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzaYKb9aMReYxZoij_ELP3G4okBK8zBsOTTF5aXMblSYfH1ui3wvgKnys1r09p2qKqr/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwGv8w87PAp-Ru8jGYkk6Q1iCszCFUKuIQSyG9AJWnAsMo2DubNC3GKJQJet80RuLXI/exec';
     const form = document.getElementById('whitelistForm');
     Swal.fire({
         icon: 'info',
@@ -138,7 +138,7 @@ function alertt(){
     Swal.fire({
         title: 'You must accept the rules.',
         html: `
-        <a class="btny btn btn-warning" onclick="rules()"><i class="fas fa-info-circle"></i></a>`,
+        <a class="btn btn btn-warning" onclick="rules()"><i class="fas fa-info-circle"></i></a>`,
         icon: 'warning',
         showConfirmButton: false,
         allowOutsideClick: false
