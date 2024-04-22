@@ -135,7 +135,6 @@ function alertt(){
         html: `
         <a class="btny btn btn-warning" onclick="rules()"><i class="fas fa-info-circle"></i></a>`,
         icon: 'warning',
-        confirmButtonText: 'OK',
         showConfirmButton: false,
         allowOutsideClick: false
     });
@@ -280,5 +279,26 @@ function rules() {
             document.getElementById('acceptRulesYes').checked = true;
         }
     });
+}
+
+function myFunction(event) {
+    var target = event.target;
+    var copyText = "play.minecraft.tn";
+
+    navigator.clipboard.writeText(copyText);
+
+    Swal.fire({
+        text: 'cpyied to clipboeard',
+        html: '<h2>play.minecraft.tn</h2><br><h4 style="color:wheat">coppied</h4>',
+         // Set the title color to white
+        imageUrl: 'src/server-icon.png',
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: "Custom image",
+        background: `#ff000001`,
+        showConfirmButton: false,
+        allowOutsideClick: true
+    });
+    
 }
 
