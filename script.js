@@ -63,8 +63,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
         html: `
             <h6>${randomQuestion}</h6>
 
-            <input type="hidden" id="randomQuestionInput" name="randomQ" value="${randomQuestion}">
-            <input placeholder="Your answer" id="answer" name="answer" required>
+            <input placeholder="Your answer" id="ruleAnswer" name="answer" required>
         `,
         showCancelButton: false,
         showConfirmButton: true,
