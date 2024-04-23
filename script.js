@@ -51,7 +51,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
     ];
 
     // Randomly select a question from the array
-    const randomQuestion = ruleQuestions[Math.floor(Math.random() * ruleQuestions.length)];
+    const randomQuestion = ruleQuestions[Math.floor(Math.random() ** ruleQuestions.length)];
 
     // Update the hidden input field with the random question
     document.getElementById('randomQuestionInput').value = randomQuestion;
