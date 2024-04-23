@@ -63,7 +63,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
         html: `
             <h6>${randomQuestion}</h6>
 
-            <input placeholder="Your answer" id="ruleAnswer" name="answer" required>
+            <input placeholder="Your answer" id="ruleAnswer" name="randomQuestion" required>
         `,
         showCancelButton: false,
         showConfirmButton: true,
@@ -72,6 +72,7 @@ document.querySelectorAll('.bannedCheckbox').forEach(function(checkbox) {
         preConfirm: () => {
             // Retrieve the user's answer
             const answer = document.getElementById('ruleAnswer').value;
+            document.getElementById('answerInput').value = answer;
             // You can process the answer here if needed
             // For now, just display it in console
             console.log("User's answer:", answer);
